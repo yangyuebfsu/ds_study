@@ -37,3 +37,15 @@ class Solution(object):
         for x in range(0,pairs):
             output_list=output_list+ ( [ nums[2*x+1] ]*nums[2*x] )  
         return output_list
+
+#python3
+class Solution(object):
+    def decompressRLElist(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        output_list=[]
+        for x in range(0,  len(nums), 2 ):
+            output_list+= ( [ nums[x+1] ]*nums[x] )  
+        return output_list
